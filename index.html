@@ -106,16 +106,17 @@
 <script>
     // Form Validation
     document.getElementById('loanForm').addEventListener('submit', function(event) {
-        event.preventDefault();
+        event.preventDefault(); // Prevent default form submission
         
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const loanAmount = document.getElementById('loanAmount').value;
         const loanPurpose = document.getElementById('loanPurpose').value;
 
+        // Validate if all fields are filled
         if (name && email && loanAmount && loanPurpose) {
-            this.submit();
-            window.location.href = "thank_you.html"; // Redirect after submission
+            // If valid, submit the form data
+            this.submit(); // This submits the form to Formcarry
         } else {
             alert("Please fill in all required fields.");
         }
